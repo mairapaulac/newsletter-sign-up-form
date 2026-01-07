@@ -1,49 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="./style/style.css">
-  
-  <title>Newsletter sign-up form</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+
+    <title>Newsletter sign-up form</title>
+  </head>
 
   <body>
-    <main id="container">
-      <section id="form-info">
-        <h2>Stay updated!</h2>
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+    <main>
+      <section id="form-section">
+        <div id="form-info">
+          <h1>Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
 
-        <div id="update-list">
+          <div id="update-list">
+            <div class="list-item">
+              <img src="./assets/images/icon-list.svg" alt="" />
+              <p>Product discovery and building what matters</p>
+            </div>
+            <div class="list-item">
+              <img src="./assets/images/icon-list.svg" alt="" />
+              <p>Measuring to ensure updates are a success</p>
+            </div>
+            <div class="list-item">
+              <img src="./assets/images/icon-list.svg" alt="" />
+              <p>And much more!</p>
+            </div>
+          </div>
 
-          <div class="list-item">
-            <img src="./assets/images/icon-list.svg" alt="">
-            <p>Product discovery and building what matters</p>
-          </div>
-          <div class="list-item">
-            <img src="./assets/images/icon-list.svg" alt="">
-            <p>Measuring to ensure updates are a success</p>
-          </div>
-          <div class="list-item">
-            <img src="./assets/images/icon-list.svg" alt="">
-            <p>And much more!</p>
+          <div id="form">
+            <div id="email">
+              <p>Email address</p>
+              <p id="hidden-text">Valid email required</p>
+            </div>
+            <input
+              id="input-email"
+              type="email"
+              placeholder="email@company.com"
+            />
+            <button id="btn-subscribe">Subscribe to monthly newsletter</button>
           </div>
         </div>
 
-        <div id="form">
-          <p>Email address</p>
-          <input id= "input-email" type="email" name="" id="" placeholder="email@company.com">
-          <button id="btn-subscribe">Subscribe to monthly newsletter</button>
+        <div id="image-container">
+          <img
+            id="image-desktop"
+            src="./assets/images/illustration-sign-up-desktop.svg"
+            alt=""
+          />
         </div>
-
       </section>
 
-      <section id="image-container">
-        <img id="image-desktop" src="./assets/images/illustration-sign-up-desktop.svg" alt="">
-      </section>
+    <section id="success-modal">
+      <img src="./assets/images/icon-list.svg" alt="" />
+      <h1>Thanks for subscribing!</h1>
+      <p>A confirmation email has been sent to <span id="personal-email">nome@email.com</span>. Please open it and click the button inside to confirm your subscription</p>
+      <button id="btn-dismiss">Dismiss message</button>
+    </section>
     </main>
-
   </body>
-</body>
+
+  <script src="script.js"></script>
 </html>

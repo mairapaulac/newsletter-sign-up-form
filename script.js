@@ -38,5 +38,5 @@ function showSuccess() {
 
 input.addEventListener("input", emailCheck);
 btnSub.addEventListener("click", showSuccess);
-//document.getElementById("btn-subscribe").addEventListener("click")
+
 

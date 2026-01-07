@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* 1. VARIÁVEIS: Definimos as cores num só lugar */
+
 :root {
   --color-dark-navy: hsl(234, 29%, 20%);
   --color-charcoal: hsl(235, 18%, 26%);
@@ -70,6 +70,7 @@ main {
 
 #success-modal.success-modal-showing{
   display: flex;
+  animation: popIn 3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 #success-modal p {
@@ -189,4 +190,16 @@ h1 {
   display: flex;
   flex-direction: row;
   gap: 10px;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px); 
+  }
+ 
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0); 
+  }
 }
